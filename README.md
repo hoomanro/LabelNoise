@@ -2,7 +2,7 @@
 # LabelNoise
 ## Data cleansing
 
-One approach to handle noise label is data cleansing method. We can import and create instance of the LabelNoise class and apply the data cleansing method on the noisy data to remove and reassign label noise. Data cleansing method will identify label noise base on running classification mutliple time iteratibly on the noisy data in cross-validated form and reasign new labels for noisy data using a model trained via cleansed data. The method continues till the noise_ratio of the dataset drops below some threshold (default is 0.05). The method described in more detail in our paper [1].
+One approach to handle noise label is data cleansing method. We can import and create instance of the LabelNoise class and apply the data cleansing method on the noisy data to remove and reassign label noise. Data cleansing method will identify label noise base on running classification mutliple time iteratibly on the noisy data in cross-validated form and reasign new labels for noisy data using a model trained via cleansed data. The method continues till the noise_ratio of the dataset drops below some threshold (default is 0.05). The method described in more detail in our paper <a href="https://doi.org/10.1016/j.bpsc.2020.05.008">[1]</a>.
 
 Caveate: the choise of classifier and its parameters is important. One way to obtain good candidate for classification pipeline is to apply grid search on multiple models with different range of parameters on original data.
 
